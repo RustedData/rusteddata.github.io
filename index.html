@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Spotify...</title>
+    <style>
+        body { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; background: #181818; color: #fff; }
+        img { max-width: 200px; margin-bottom: 2rem; }
+        .message { font-size: 1.2rem; margin-bottom: 1rem; }
+        .fallback { margin-top: 2rem; }
+        a.button { background: #1db954; color: #fff; padding: 1rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify logo">
+    <div class="message">Launching Spotify...</div>
+    <div class="fallback" id="fallback" style="display:none;">
+        <div>If nothing happens, <a id="spotify-link" class="button" href="#" target="_blank">open in Spotify</a></div>
+    </div>
+    <script>
+        // Get the Spotify URL from the query string
+        function getSpotifyUrl() {
+            const params = new URLSearchParams(window.location.search);
+            let url = params.get('spotify');
+            if (!url) return null;
+            // Accept both spotify: and https://open.spotify.com links
+            if (url.startsWith('spotify:')) {
+                return url;
+            } else if (url.startsWith('https://open.spotify.com/')) {
+                // Convert to spotify: URI for deep linking
+                const parts = url.replace('https://open.spotify.com/', '').split('/');
+                if (parts.length >= 2) {
+                    return `spotify:${parts[0]}:${parts[1].split('?')[0]}`;
+                }
+            }
+            return url;
+        }
+
+        const spotifyUrl = getSpotifyUrl();
+        if (spotifyUrl) {
+            // Try to open the Spotify app
+            const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+            const isAndroid = /Android/.test(navigator.userAgent);
+            let appLink = spotifyUrl;
+            if (!spotifyUrl.startsWith('spotify:')) {
+                appLink = spotifyUrl;
+            }
+            // Try to open the app after a short delay
+            setTimeout(() => {
+                window.location = appLink;
+            }, 500);
+            // Show fallback after 2 seconds
+            setTimeout(() => {
+                document.getElementById('fallback').style.display = 'block';
+                document.getElementById('spotify-link').href = spotifyUrl;
+            }, 2000);
+        } else {
+            document.querySelector('.message').textContent = 'No Spotify link provided.';
+        }
+    </script>
+</body>
+</html>

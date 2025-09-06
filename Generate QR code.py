@@ -33,12 +33,15 @@ def get_playlist_tracks(playlist_url):
             title = track["name"]
             artist = track["artists"][0]["name"]
             release_year = track["album"]["release_date"].split("-")[0]
-            url = track["external_urls"]["spotify"]
+            # Build the landing page URL with the Spotify link as a query parameter
+            base_url = "https://rusteddata.github.io/"
+            spotify_url = track["external_urls"]["spotify"]
+            landing_url = f"{base_url}?spotify={spotify_url}"
             tracks.append({
                 "title": title,
                 "artist": artist,
                 "year": release_year,
-                "url": url
+                "url": landing_url
             })
         if results["next"]:
             results = sp.next(results)
