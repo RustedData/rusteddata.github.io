@@ -1,3 +1,8 @@
+# Voeg hier handmatig YouTube-tracks toe:
+manual_tracks = [
+    # Voorbeeld:
+     {"title": "Jannenlied", "artist": "Jannen uit Zwaag", "year": "2011", "url": "https://www.youtube.com/watch?v=yoO3TP9QU44"},
+]
 import qrcode
 import io
 import math
@@ -33,15 +38,12 @@ def get_playlist_tracks(playlist_url):
             title = track["name"]
             artist = track["artists"][0]["name"]
             release_year = track["album"]["release_date"].split("-")[0]
-            # Build the landing page URL with the Spotify link as a query parameter
-            base_url = "https://rusteddata.github.io/"
-            spotify_url = track["external_urls"]["spotify"]
-            landing_url = f"{base_url}?spotify={spotify_url}"
+            url = track["external_urls"]["spotify"]
             tracks.append({
                 "title": title,
                 "artist": artist,
                 "year": release_year,
-                "url": landing_url
+                "url": url
             })
         if results["next"]:
             results = sp.next(results)
@@ -115,8 +117,11 @@ if __name__ == "__main__":
     playlist_url = "https://open.spotify.com/playlist/1Uh0IYIezLqWiyQkwyOlU2?si=24d3d2bcebd94aa3"
 
     tracks = get_playlist_tracks(playlist_url)
-    print(f"Gevonden {len(tracks)} nummers.")
+    print(f"Gevonden {len(tracks)} nummers uit Spotify.")
 
-    create_pdf_front(tracks, "qrcards_front.pdf")
-    create_pdf_back(tracks, "qrcards_back.pdf")
+    # Voeg handmatige YouTube-tracks toe
+    all_tracks = tracks + manual_tracks
+
+    create_pdf_front(all_tracks, "qrcards_front.pdf")
+    create_pdf_back(all_tracks, "qrcards_back.pdf")
     print("✅ PDF’s gegenereerd: qrcards_front.pdf en qrcards_back.pdf")
