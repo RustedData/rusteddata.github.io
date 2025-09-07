@@ -7,8 +7,17 @@ from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 
 
-CLIENT_ID = "6df28ad49766486da9edd3cf83d1e119"
-CLIENT_SECRET = "741c0c0c9cd545cdb18a3fddd96c851a"
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
+
+if not CLIENT_ID or not CLIENT_SECRET:
+    raise RuntimeError("Please set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET as environment variables.")
+
 BG_IMAGE_PATH = "Text side.png"
 OUTPUT_PDF = "qrcards_text_side.pdf"
 
