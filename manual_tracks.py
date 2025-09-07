@@ -6,5 +6,6 @@ manual_tracks = [
     # Example:
      {"title": "Jannenlied", "artist": "Jannen uit Zwaag", "year": "2011", "url": "https://www.youtube.com/watch?v=yoO3TP9QU44"},
      {"title": "In Zwaag ben ik geboren", "artist": "Kevin Bakker", "year": "2019", "url": "https://www.youtube.com/watch?v=sj0PxtuTv4o"},
-     {"title": "Het Zwaagse volkslied", "artist": "Het Masker", "year": "OUD", "url": "https://www.youtube.com/watch?v=01xr9xkFXvM"},
+     {"title": "Het Zwaagse volkslied", "artist": "Simon Beemster (zegt mijn Opa)", "year": "1955", "url": "https://www.youtube.com/watch?v=01xr9xkFXvM"},
+     {"title": "In de Hemel is Geen Bier", "artist": "Tony Geys", "year": "1962", "url": "https://www.youtube.com/watch?v=9LKMxJnHaPI"},
 ]

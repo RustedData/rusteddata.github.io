@@ -11,9 +11,20 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from datetime import datetime
 import os
 
-# 🔑 Vul je eigen Spotify API gegevens in
-CLIENT_ID = "6df28ad49766486da9edd3cf83d1e119"
-CLIENT_SECRET = "741c0c0c9cd545cdb18a3fddd96c851a"
+
+
+# Spotify API credentials are now read from environment variables for security
+# Load environment variables from .env if present
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
+
+if not CLIENT_ID or not CLIENT_SECRET:
+    raise RuntimeError("Please set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET as environment variables.")
 
 
 BG_IMAGE_PATH = "QR side.png"  # PNG in main folder
@@ -36,16 +47,18 @@ def get_playlist_tracks(playlist_url):
     tracks = []
     while results:
         for item in results["items"]:
-            track = item["track"]
+            track = item.get("track")
             if not track:
                 continue
-            title = track["name"]
-            artist = track["artists"][0]["name"]
-            release_year = track["album"]["release_date"].split("-")[0]
-            url = track["external_urls"]["spotify"]
+            title = track.get("name", "")
+            # Always get all artist names from the correct field
+            artists = track.get("artists", [])
+            artist_names = ', '.join([a.get("name", "") for a in artists])
+            release_year = track.get("album", {}).get("release_date", "").split("-")[0]
+            url = track.get("external_urls", {}).get("spotify", "")
             tracks.append({
                 "title": title,
-                "artist": artist,
+                "artist": artist_names,
                 "year": release_year,
                 "url": url
             })

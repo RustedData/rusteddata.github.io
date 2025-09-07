@@ -2,3 +2,5 @@ qrcode
 requests
 reportlab
 spotipy
+matplotlib
+python-dotenv

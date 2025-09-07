@@ -14,11 +14,15 @@ from spotipy import Spotify
 from spotipy.oauth2 import SpotifyClientCredentials
 from datetime import datetime
 from reportlab.lib.utils import ImageReader
+import os
 
 
 # 🔑 Vul je eigen Spotify API gegevens in
-CLIENT_ID = "6df28ad49766486da9edd3cf83d1e119"
-CLIENT_SECRET = "741c0c0c9cd545cdb18a3fddd96c851a"
+CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
+CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
+
+if not CLIENT_ID or not CLIENT_SECRET:
+    raise RuntimeError("Please set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET as environment variables.")
 
 def get_playlist_tracks(playlist_url):
     sp = Spotify(auth_manager=SpotifyClientCredentials(
