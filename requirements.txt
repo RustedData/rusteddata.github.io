@@ -4,3 +4,4 @@ reportlab
 spotipy
 matplotlib
 python-dotenv
+PyPDF2
