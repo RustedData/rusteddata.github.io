@@ -242,9 +242,13 @@ def create_pdf_with_text_images_rightmost_first(tracks, filename=OUTPUT_PDF):
     page_w, page_h = A4
     img_w = img_cm * cm
     img_h = img_cm * cm
-    cols = int(page_w // img_w)
-    rows = int(page_h // img_h)
+    cols = 3
+    rows = 4
     per_page = cols * rows
+    block_w = cols * img_w
+    block_h = rows * img_h
+    margin_x = (page_w - block_w) / 2
+    margin_y = (page_h - block_h) / 2
     n_images = len(images)
     for page_start in range(0, n_images, per_page):
         page_images = images[page_start:page_start+per_page]
@@ -252,11 +256,11 @@ def create_pdf_with_text_images_rightmost_first(tracks, filename=OUTPUT_PDF):
             row_start = row * cols
             row_imgs = page_images[row_start:row_start+cols]
             n_imgs_in_row = len(row_imgs)
-            row_width = n_imgs_in_row * img_w
-            left_margin = page_w - row_width
-            for i, img_path in enumerate(reversed(row_imgs)):
-                x = left_margin + i * img_w
-                y = page_h - ((row + 1) * img_h)
+            # Always fill from right to left: first card in rightmost column, etc.
+            for i, img_path in enumerate(row_imgs):
+                col = cols - 1 - i  # rightmost column first
+                x = margin_x + col * img_w
+                y = page_h - margin_y - ((row + 1) * img_h)
                 c.drawImage(img_path, x, y, img_w, img_h)
         if page_start + per_page < n_images:
             c.showPage()

@@ -100,7 +100,6 @@ def create_qr_on_bg(track_url, out_path):
 def create_pdf_with_qr_images(tracks, filename=OUTPUT_PDF):
     # Each image should be 6.5cm x 6.5cm on paper
     img_cm = 6.5
-    img_px = 500  # arbitrary, just for temp images
     images = []
     temp_files = []
     for i, track in enumerate(tracks):
@@ -112,18 +111,26 @@ def create_pdf_with_qr_images(tracks, filename=OUTPUT_PDF):
     page_w, page_h = A4
     img_w = img_cm * cm
     img_h = img_cm * cm
-    # Calculate how many fit per row/col
-    cols = int(page_w // img_w)
-    rows = int(page_h // img_h)
+    cols = 3
+    rows = 4
     per_page = cols * rows
-    for idx, img_path in enumerate(images):
-        if idx % per_page == 0 and idx > 0:
+    block_w = cols * img_w
+    block_h = rows * img_h
+    margin_x = (page_w - block_w) / 2
+    margin_y = (page_h - block_h) / 2
+    for page_start in range(0, len(images), per_page):
+        page_images = images[page_start:page_start+per_page]
+        for row in range(rows):
+            row_start = row * cols
+            row_imgs = page_images[row_start:row_start+cols]
+            n_imgs_in_row = len(row_imgs)
+            # Always fill from left to right, even for partial rows, and always center block
+            for i, img_path in enumerate(row_imgs):
+                x = margin_x + i * img_w
+                y = page_h - margin_y - ((row + 1) * img_h)
+                c.drawImage(img_path, x, y, img_w, img_h)
+        if page_start + per_page < len(images):
             c.showPage()
-        col = (idx % per_page) % cols
-        row = (idx % per_page) // cols
-        x = col * img_w
-        y = page_h - ((row + 1) * img_h)
-        c.drawImage(img_path, x, y, img_w, img_h)
     c.save()
     # Clean up temp files
     for f in temp_files:

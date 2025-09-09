@@ -77,6 +77,6 @@ Thumbs.db
 *.tmp
 
 # Local data
-spotify_tracks.json
-qrcards_with_bg.pdf
 qrcards_text_side.pdf
+qrcards_with_bg.pdf
+qrcards_combined.pdf
