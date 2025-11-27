@@ -1,9 +1,233 @@
 [
   {
+    "title": "Aces High",
+    "artist": "Iron Maiden",
+    "year": "1984",
+    "url": "https://open.spotify.com/track/3wFGRek61NIF330UwJCI52",
+    "checked": true
+  },
+  {
+    "title": "Behind Blue Eyes",
+    "artist": "The Who",
+    "year": "1971",
+    "url": "https://open.spotify.com/track/0cKk8BKEi7zXbdrYdyqBP5",
+    "checked": true
+  },
+  {
+    "title": "Bring It All Back",
+    "artist": "S Club",
+    "year": "1999",
+    "url": "https://open.spotify.com/track/3v0uXfyMEZ1lGvBOv1Y4ar",
+    "checked": true
+  },
+  {
+    "title": "Common People",
+    "artist": "Pulp",
+    "year": "1995",
+    "url": "https://open.spotify.com/track/2fXKyAyPrEa24c6PJyqznF",
+    "checked": true
+  },
+  {
+    "title": "Dans Met Tante Rita",
+    "artist": "DD Company, Minidisco",
+    "year": "2015",
+    "url": "https://open.spotify.com/track/6L6gimE4VLHrnRWOK2Usah",
+    "checked": true
+  },
+  {
+    "title": "De Diepte",
+    "artist": "S10",
+    "year": "2022",
+    "url": "https://open.spotify.com/track/7uQ7e7nzbtyX87eIYHpj6Z",
+    "checked": true
+  },
+  {
+    "title": "Double Talkin' Jive",
+    "artist": "Guns N' Roses",
+    "year": "1991",
+    "url": "https://open.spotify.com/track/46AtSShP5IL2Ls3uHpxmt8",
+    "checked": true
+  },
+  {
+    "title": "Dschinghis Khan",
+    "artist": "Dschinghis Khan",
+    "year": "1879",
+    "url": "https://open.spotify.com/track/0L5yDT2FsM8xPXfckmR9yE",
+    "checked": true
+  },
+  {
+    "title": "Everybody Dies",
+    "artist": "Ayreon",
+    "year": "2017",
+    "url": "https://open.spotify.com/track/7EMaXe1DQ4S0NejsXGlbw2",
+    "checked": true
+  },
+  {
+    "title": "Greatest Love of All",
+    "artist": "Whitney Houston",
+    "year": "1985",
+    "url": "https://open.spotify.com/track/6yJxCltgtmGxIgKOS6ndnu",
+    "checked": true
+  },
+  {
+    "title": "Have A Nice Day",
+    "artist": "Bon Jovi",
+    "year": "2005",
+    "url": "https://open.spotify.com/track/06Zz2l7cVTCTgCNDe1bnEF",
+    "checked": true
+  },
+  {
+    "title": "Hocus Pocus",
+    "artist": "Focus",
+    "year": "1971",
+    "url": "https://open.spotify.com/track/6iZtDWu3FTuxu7AprIqA3Y",
+    "checked": true
+  },
+  {
+    "title": "Huisfeestje",
+    "artist": "Bankzitters, Roxy Dekker",
+    "year": "2024",
+    "url": "https://open.spotify.com/track/6HfzAzEWhwo19n2jrJnM7k",
+    "checked": true
+  },
+  {
+    "title": "Hyperventilatie",
+    "artist": "Antoon",
+    "year": "2020",
+    "url": "https://open.spotify.com/track/07vM3GM9QrrhGYuIMCBh3C",
+    "checked": true
+  },
+  {
+    "title": "I'm a Believer",
+    "artist": "The Monkees",
+    "year": "1967",
+    "url": "https://open.spotify.com/track/3G7tRC24Uh09Hmp1KZ7LQ2",
+    "checked": true
+  },
+  {
+    "title": "It's All Coming Back to Me Now",
+    "artist": "Céline Dion",
+    "year": "1996",
+    "url": "https://open.spotify.com/track/5EQzuYfTZt7B2LqlvTF49l",
+    "checked": true
+  },
+  {
+    "title": "Je bent een soepkip!",
+    "artist": "Ernst, Bobbie en de rest",
+    "year": "2009",
+    "url": "https://open.spotify.com/track/4C6CMLNfo6IjJC9ZAyErMA",
+    "checked": true
+  },
+  {
+    "title": "Let the Good Times Roll",
+    "artist": "Ray Charles",
+    "year": "1959",
+    "url": "https://open.spotify.com/track/1IV8T9xWxJc0tSEFJit25F",
+    "checked": true
+  },
+  {
+    "title": "Let There Be Rock",
+    "artist": "AC/DC",
+    "year": "1977",
+    "url": "https://open.spotify.com/track/753KutoAy00apPsplMRetG",
+    "checked": true
+  },
+  {
+    "title": "Mis Ik Jou",
+    "artist": "Acda en de Munnik",
+    "year": "1998",
+    "url": "https://open.spotify.com/track/3ZDO5YINwfoifRQ3ElshPM",
+    "checked": true
+  },
+  {
+    "title": "Misirlou",
+    "artist": "Dick Dale",
+    "year": "1960",
+    "url": "https://open.spotify.com/track/1ZZ45sLJAeOMpmW807hIm8",
+    "checked": true
+  },
+  {
+    "title": "Out In L.A.",
+    "artist": "Red Hot Chili Peppers",
+    "year": "1984",
+    "url": "https://open.spotify.com/track/0ytvC9tG03obop9RXqG3af",
+    "checked": true
+  },
+  {
     "title": "Paint It, Black",
     "artist": "The Rolling Stones",
     "year": "1966",
     "url": "https://open.spotify.com/track/63T7DJ1AFDD6Bn8VzG6JE8",
-    "checked": false
+    "checked": true
+  },
+  {
+    "title": "Rasputin",
+    "artist": "Boney M.",
+    "year": "1978",
+    "url": "https://open.spotify.com/track/5jkFvD4UJrmdoezzT1FRoP",
+    "checked": true
+  },
+  {
+    "title": "Rock and Roll",
+    "artist": "Led Zeppelin",
+    "year": "1971",
+    "url": "https://open.spotify.com/track/4PRGxHpCpF2yoOHYKQIEwD",
+    "checked": true
+  },
+  {
+    "title": "Runaway",
+    "artist": "Bon Jovi",
+    "year": "1984",
+    "url": "https://open.spotify.com/track/0X1sqQ652p1sceKM2nJlIJ",
+    "checked": true
+  },
+  {
+    "title": "RÓA",
+    "artist": "VÆB",
+    "year": "2025",
+    "url": "https://open.spotify.com/track/1YnOwWvV1bQevRqJMCbYJz",
+    "checked": true
+  },
+  {
+    "title": "The Whole of the Moon",
+    "artist": "The Waterboys",
+    "year": "1985",
+    "url": "https://open.spotify.com/track/6MYtWkoEiUNZmMe5CgCczM",
+    "checked": true
+  },
+  {
+    "title": "Wannabe",
+    "artist": "Spice Girls",
+    "year": "1996",
+    "url": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT",
+    "checked": true
+  },
+  {
+    "title": "Year 3000",
+    "artist": "Busted",
+    "year": "2002",
+    "url": "https://open.spotify.com/track/0zjB7ewBWnMgQDMQpFzt92",
+    "checked": true
+  },
+  {
+    "title": "You Could Be Mine",
+    "artist": "Guns N' Roses",
+    "year": "1991",
+    "url": "https://open.spotify.com/track/0dlTGl67UFWcKupzkxZYOn",
+    "checked": true
+  },
+  {
+    "title": "You've Got a Friend in Me",
+    "artist": "Randy Newman",
+    "year": "1995",
+    "url": "https://open.spotify.com/track/2stkLJ0JNcXkIRDNF3ld6c",
+    "checked": true
+  },
+  {
+    "title": "Şımarık",
+    "artist": "Tarkan",
+    "year": "1997",
+    "url": "https://open.spotify.com/track/6vEL7E8TGzrxuxbrgdlkLL",
+    "checked": true
   }
 ]
