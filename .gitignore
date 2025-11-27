@@ -71,7 +71,6 @@ Thumbs.db
 
 # PDF/temporary
 *.pdf
-*.png
 *.jpg
 *.jpeg
 *.tmp
