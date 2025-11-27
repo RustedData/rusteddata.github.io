@@ -12,22 +12,55 @@ since it's not a secret; if you prefer runtime override, set `PLAYLIST_URL` env 
 import os
 
 # Default playlist URL used when no environment override is provided.
-# Replace the string below with your desired playlist URL if you want a
-# repository-tracked default. Otherwise set the `PLAYLIST_URL` environment
-# variable to override at runtime.
-DEFAULT_PLAYLIST_URL = "https://open.spotify.com/playlist/0YmI56lLbxm0Fq9cMX6TZR?si=95f02622779a4d6e"
+# Leave empty to force interactive input when no env var is set.
+DEFAULT_PLAYLIST_URL = ""
+
 
 def get_playlist_url():
     """Return the playlist URL.
 
     Order of preference:
-    - Environment variable `PLAYLIST_URL` if set
-    - `DEFAULT_PLAYLIST_URL` otherwise
+    - Environment variable `PLAYLIST_URL` if set and non-empty
+    - If `DEFAULT_PLAYLIST_URL` is non-empty, use it
+    - Otherwise prompt the user interactively until a non-empty URL is provided
+
+    In non-interactive environments (no stdin), a RuntimeError is raised.
     """
-    return os.environ.get("PLAYLIST_URL", DEFAULT_PLAYLIST_URL)
+    # 1) environment override
+    env_url = os.environ.get("PLAYLIST_URL")
+    if env_url:
+        return env_url.strip()
+
+    # 2) configured repository default (if present)
+    if DEFAULT_PLAYLIST_URL:
+        return DEFAULT_PLAYLIST_URL.strip()
+
+    # 3) interactive prompt (required)
+    prompt = (
+        "Enter Spotify playlist URL (e.g. https://open.spotify.com/playlist/...): "
+    )
+    try:
+        while True:
+            url = input(prompt).strip()
+            if not url:
+                print("Playlist URL is required. Please enter a valid Spotify playlist URL.")
+                continue
+            # Basic sanity check for a URL
+            if not (url.startswith("http://") or url.startswith("https://")):
+                print("That doesn't look like a valid URL. Please enter a full URL starting with http:// or https://")
+                continue
+            return url
+    except (EOFError, KeyboardInterrupt):
+        # Non-interactive environment or user cancelled
+        raise RuntimeError(
+            "No PLAYLIST_URL provided (env var not set) and input is not available. Please set PLAYLIST_URL." 
+        )
 
 # Convenience constant; modules can import this directly.
-PLAYLIST_URL = get_playlist_url()
+# Do not call get_playlist_url() at import time (it may prompt). Instead prefer
+# the environment/default value here. Call `get_playlist_url()` explicitly
+# in scripts that want to prompt the user.
+PLAYLIST_URL = os.environ.get("PLAYLIST_URL", DEFAULT_PLAYLIST_URL)
 
 # File and output configuration
 SPOTIFY_TRACKS_JSON = os.environ.get("SPOTIFY_TRACKS_JSON", "spotify_tracks.json")
