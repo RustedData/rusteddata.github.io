@@ -6,67 +6,17 @@ import requests
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
-from spotipy import Spotify
-from spotipy.oauth2 import SpotifyClientCredentials
 from datetime import datetime
 import os
-
-
-
-# Spotify API credentials are now read from environment variables for security
-# Load environment variables from .env if present
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except ImportError:
-    pass
-CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
-CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
-
-if not CLIENT_ID or not CLIENT_SECRET:
-    raise RuntimeError("Please set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET as environment variables.")
-
-
-BG_IMAGE_PATH = "QR side.png"  # PNG in main folder
-OUTPUT_PDF = "qrcards_with_bg.pdf"
+from main.spotify_utils import get_playlist_tracks
+from main.config import QR_BG_IMAGE, QR_OUTPUT_PDF, CARD_SIZE_CM, CARDS_COLS, CARDS_ROWS
 
 # --- Import manual tracks from external file ---
-from manual_tracks import manual_tracks
+from main.manual_tracks import manual_tracks
+from main.config import get_playlist_url
 
 
-# --- Copied from Generate QR code.py ---
-def get_playlist_tracks(playlist_url):
-    sp = Spotify(auth_manager=SpotifyClientCredentials(
-        client_id=CLIENT_ID,
-        client_secret=CLIENT_SECRET
-    ))
-
-    playlist_id = playlist_url.split("/")[-1].split("?")[0]
-    results = sp.playlist_items(playlist_id, additional_types=['track'])
-
-    tracks = []
-    while results:
-        for item in results["items"]:
-            track = item.get("track")
-            if not track:
-                continue
-            title = track.get("name", "")
-            # Always get all artist names from the correct field
-            artists = track.get("artists", [])
-            artist_names = ', '.join([a.get("name", "") for a in artists])
-            release_year = track.get("album", {}).get("release_date", "").split("-")[0]
-            url = track.get("external_urls", {}).get("spotify", "")
-            tracks.append({
-                "title": title,
-                "artist": artist_names,
-                "year": release_year,
-                "url": url
-            })
-        if results["next"]:
-            results = sp.next(results)
-        else:
-            results = None
-    return tracks
+# `get_playlist_tracks` is now centralized in `main.spotify_utils`.
 
 def generate_qr_code(url):
     qr = qrcode.QRCode(
@@ -81,7 +31,7 @@ def generate_qr_code(url):
     return img
 
 def create_qr_on_bg(track_url, out_path):
-    bg = Image.open(BG_IMAGE_PATH).convert("RGBA")
+    bg = Image.open(QR_BG_IMAGE).convert("RGBA")
     bg_w, bg_h = bg.size
     qr_size = int(0.4 * min(bg_w, bg_h))
     qr_img = generate_qr_code(track_url).resize((qr_size, qr_size), Image.LANCZOS).convert("RGBA")
@@ -97,9 +47,9 @@ def create_qr_on_bg(track_url, out_path):
     bg.save(out_path)
     return out_path
 
-def create_pdf_with_qr_images(tracks, filename=OUTPUT_PDF):
+def create_pdf_with_qr_images(tracks, filename=QR_OUTPUT_PDF):
     # Each image should be 6.5cm x 6.5cm on paper
-    img_cm = 6.5
+    img_cm = CARD_SIZE_CM
     images = []
     temp_files = []
     for i, track in enumerate(tracks):
@@ -111,8 +61,8 @@ def create_pdf_with_qr_images(tracks, filename=OUTPUT_PDF):
     page_w, page_h = A4
     img_w = img_cm * cm
     img_h = img_cm * cm
-    cols = 3
-    rows = 4
+    cols = CARDS_COLS
+    rows = CARDS_ROWS
     per_page = cols * rows
     block_w = cols * img_w
     block_h = rows * img_h
@@ -141,10 +91,10 @@ def create_pdf_with_qr_images(tracks, filename=OUTPUT_PDF):
 
 
 if __name__ == "__main__":
-    playlist_url = "https://open.spotify.com/playlist/0YmI56lLbxm0Fq9cMX6TZR?si=95f02622779a4d6e"
+    playlist_url = get_playlist_url()
     tracks = get_playlist_tracks(playlist_url)
     # Append manual tracks at the end
     tracks += manual_tracks
     print(f"Gevonden {len(tracks)} nummers (inclusief handmatige tracks).")
-    create_pdf_with_qr_images(tracks, OUTPUT_PDF)
-    print(f"✅ PDF gegenereerd: {OUTPUT_PDF}")
+    create_pdf_with_qr_images(tracks, QR_OUTPUT_PDF)
+    print(f"✅ PDF gegenereerd: {QR_OUTPUT_PDF}")

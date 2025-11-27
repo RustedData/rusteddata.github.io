@@ -3,26 +3,12 @@ import os
 from reportlab.pdfgen import canvas
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import cm
-from spotipy import Spotify
-from spotipy.oauth2 import SpotifyClientCredentials
-
-
-try:
-    from dotenv import load_dotenv
-    load_dotenv()
-except ImportError:
-    pass
-CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID")
-CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET")
-
-if not CLIENT_ID or not CLIENT_SECRET:
-    raise RuntimeError("Please set SPOTIFY_CLIENT_ID and SPOTIFY_CLIENT_SECRET as environment variables.")
-
-BG_IMAGE_PATH = "Text side.png"
-OUTPUT_PDF = "qrcards_text_side.pdf"
+from main.spotify_utils import get_playlist_tracks
+from main.config import TEXT_BG_IMAGE, TEXT_OUTPUT_PDF, CARD_SIZE_CM, CARDS_COLS, CARDS_ROWS
 
 # --- Import manual tracks from external file ---
-from manual_tracks import manual_tracks
+from main.manual_tracks import manual_tracks
+from main.config import get_playlist_url
 
 # Helper to get fonts (fallback to default if not found)
 def get_font(size, bold=False, italic=False):
@@ -38,34 +24,7 @@ def get_font(size, bold=False, italic=False):
     except:
         return ImageFont.load_default()
 
-def get_playlist_tracks(playlist_url):
-    sp = Spotify(auth_manager=SpotifyClientCredentials(
-        client_id=CLIENT_ID,
-        client_secret=CLIENT_SECRET
-    ))
-    playlist_id = playlist_url.split("/")[-1].split("?")[0]
-    results = sp.playlist_items(playlist_id, additional_types=['track'])
-    tracks = []
-    while results:
-        for item in results["items"]:
-            track = item["track"]
-            if not track:
-                continue
-            title = track["name"]
-            artist = ', '.join([a["name"] for a in track["artists"]])
-            release_year = track["album"]["release_date"].split("-")[0]
-            url = track["external_urls"]["spotify"]
-            tracks.append({
-                "title": title,
-                "artist": artist,
-                "year": release_year,
-                "url": url
-            })
-        if results["next"]:
-            results = sp.next(results)
-        else:
-            results = None
-    return tracks
+# `get_playlist_tracks` is centralized in `main.spotify_utils`.
 
 def draw_glow_text(bg, draw, pos, text, font, glow_radius=4, fill="white", glow_color="black"):
     # Draw glow by drawing text several times with blur
@@ -81,7 +40,7 @@ def draw_glow_text(bg, draw, pos, text, font, glow_radius=4, fill="white", glow_
     draw.text((x, y), text, font=font, fill=fill)
 
 def create_text_on_bg(track, out_path):
-    bg = Image.open(BG_IMAGE_PATH).convert("RGBA")
+    bg = Image.open(TEXT_BG_IMAGE).convert("RGBA")
     W, H = bg.size
     draw = ImageDraw.Draw(bg)
     # Font sizes relative to image height
@@ -150,12 +109,12 @@ def create_text_on_bg(track, out_path):
     bg.save(out_path)
     return out_path
 
-def create_pdf_with_text_images(tracks, filename=OUTPUT_PDF):
+def create_pdf_with_text_images(tracks, filename=TEXT_OUTPUT_PDF):
     """
     Output a PDF with the text images of the tracks.
     Each image is placed in the center of a cell in a grid, similar to the QR code side.
     """
-    img_cm = 6.5
+    img_cm = CARD_SIZE_CM
     images = []
     temp_files = []
     for i, track in enumerate(tracks):
@@ -185,13 +144,13 @@ def create_pdf_with_text_images(tracks, filename=OUTPUT_PDF):
         except Exception:
             pass
 
-def create_pdf_with_text_images_mirrored(tracks, filename=OUTPUT_PDF):
+def create_pdf_with_text_images_mirrored(tracks, filename=TEXT_OUTPUT_PDF):
     """
     Output a PDF where each row is mirrored compared to the QR side.
     If the QR side row is: image 1, image 2, image 3, whitespace
     The text side row will be: whitespace, image 3, image 2, image 1
     """
-    img_cm = 6.5
+    img_cm = CARD_SIZE_CM
     images = []
     temp_files = []
     for i, track in enumerate(tracks):
@@ -225,12 +184,12 @@ def create_pdf_with_text_images_mirrored(tracks, filename=OUTPUT_PDF):
         except Exception:
             pass
 
-def create_pdf_with_text_images_rightmost_first(tracks, filename=OUTPUT_PDF):
+def create_pdf_with_text_images_rightmost_first(tracks, filename=TEXT_OUTPUT_PDF):
     """
     Output a PDF where each row is filled from right to left:
     image 1 in the top right, image 2 to its left, etc.
     """
-    img_cm = 6.5
+    img_cm = CARD_SIZE_CM
     images = []
     temp_files = []
     for i, track in enumerate(tracks):
@@ -242,8 +201,8 @@ def create_pdf_with_text_images_rightmost_first(tracks, filename=OUTPUT_PDF):
     page_w, page_h = A4
     img_w = img_cm * cm
     img_h = img_cm * cm
-    cols = 3
-    rows = 4
+    cols = CARDS_COLS
+    rows = CARDS_ROWS
     per_page = cols * rows
     block_w = cols * img_w
     block_h = rows * img_h
@@ -275,10 +234,10 @@ def create_pdf_with_text_images_rightmost_first(tracks, filename=OUTPUT_PDF):
 
 
 if __name__ == "__main__":
-    playlist_url = "https://open.spotify.com/playlist/0YmI56lLbxm0Fq9cMX6TZR?si=95f02622779a4d6e"
+    playlist_url = get_playlist_url()
     tracks = get_playlist_tracks(playlist_url)
     # Append manual tracks at the end
     tracks += manual_tracks
     print(f"Gevonden {len(tracks)} nummers (inclusief handmatige tracks).")
-    create_pdf_with_text_images_rightmost_first(tracks, OUTPUT_PDF)
-    print(f"✅ PDF gegenereerd: {OUTPUT_PDF}")
+    create_pdf_with_text_images_rightmost_first(tracks, TEXT_OUTPUT_PDF)
+    print(f"✅ PDF gegenereerd: {TEXT_OUTPUT_PDF}")
