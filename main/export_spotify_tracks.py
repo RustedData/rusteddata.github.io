@@ -1,6 +1,10 @@
 
 import json
-import os
+import sys, os
+# Ensure the repository root is on sys.path so `from main.*` imports work
+_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _repo_root not in sys.path:
+    sys.path.insert(0, _repo_root)
 # Load environment variables from .env if present
 try:
     from dotenv import load_dotenv

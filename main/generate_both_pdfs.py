@@ -1,4 +1,9 @@
 
+import sys, os
+# Ensure the repository root is on sys.path so `from main.*` imports work
+_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _repo_root not in sys.path:
+    sys.path.insert(0, _repo_root)
 try:
     from dotenv import load_dotenv
     load_dotenv()
@@ -8,7 +13,6 @@ from main.qr_on_bg import create_pdf_with_qr_images
 from main.text_on_bg import create_pdf_with_text_images_rightmost_first
 from main.spotify_utils import get_playlist_slug
 from main.config import SPOTIFY_TRACKS_JSON_TEMPLATE, QR_OUTPUT_PDF_TEMPLATE, TEXT_OUTPUT_PDF_TEMPLATE, get_playlist_url
-import os
 from main.manual_tracks import manual_tracks
 import json
 

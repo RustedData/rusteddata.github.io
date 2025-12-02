@@ -21,6 +21,13 @@
     "checked": true
   },
   {
+    "title": "Closer",
+    "artist": "Kings of Leon",
+    "year": "2008",
+    "url": "https://open.spotify.com/track/1O8d2pWtBclzuY3FctBPVa",
+    "checked": false
+  },
+  {
     "title": "Common People",
     "artist": "Pulp",
     "year": "1995",
@@ -61,6 +68,13 @@
     "year": "2017",
     "url": "https://open.spotify.com/track/7EMaXe1DQ4S0NejsXGlbw2",
     "checked": true
+  },
+  {
+    "title": "Everybody's Changing",
+    "artist": "Keane",
+    "year": "2004",
+    "url": "https://open.spotify.com/track/0yac0FPhLRH9i9lOng3f81",
+    "checked": false
   },
   {
     "title": "Greatest Love of All",
@@ -117,6 +131,13 @@
     "year": "2009",
     "url": "https://open.spotify.com/track/4C6CMLNfo6IjJC9ZAyErMA",
     "checked": true
+  },
+  {
+    "title": "Jelle",
+    "artist": "Slimme Schemer, Tido",
+    "year": "2001",
+    "url": "https://open.spotify.com/track/34ugxS2Lepa3SVOnVaoVqp",
+    "checked": false
   },
   {
     "title": "Let the Good Times Roll",
