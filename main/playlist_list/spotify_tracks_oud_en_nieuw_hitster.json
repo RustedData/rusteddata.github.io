@@ -21,11 +21,18 @@
     "checked": true
   },
   {
+    "title": "Calling Elvis",
+    "artist": "Dire Straits",
+    "year": "1991",
+    "url": "https://open.spotify.com/track/5g6o2ZEegnAI3MczbwZaTZ",
+    "checked": true
+  },
+  {
     "title": "Closer",
     "artist": "Kings of Leon",
     "year": "2008",
     "url": "https://open.spotify.com/track/1O8d2pWtBclzuY3FctBPVa",
-    "checked": false
+    "checked": true
   },
   {
     "title": "Common People",
@@ -46,6 +53,13 @@
     "artist": "S10",
     "year": "2022",
     "url": "https://open.spotify.com/track/7uQ7e7nzbtyX87eIYHpj6Z",
+    "checked": true
+  },
+  {
+    "title": "Don't Stop Believin'",
+    "artist": "Journey",
+    "year": "1981",
+    "url": "https://open.spotify.com/track/5RKQ5NdjSh2QzD4MaunT91",
     "checked": true
   },
   {
@@ -74,7 +88,14 @@
     "artist": "Keane",
     "year": "2004",
     "url": "https://open.spotify.com/track/0yac0FPhLRH9i9lOng3f81",
-    "checked": false
+    "checked": true
+  },
+  {
+    "title": "Everybody's Fool",
+    "artist": "Evanescence",
+    "year": "2003",
+    "url": "https://open.spotify.com/track/0tWEB6BxbI48XN79QE1JbT",
+    "checked": true
   },
   {
     "title": "Greatest Love of All",
@@ -119,6 +140,27 @@
     "checked": true
   },
   {
+    "title": "I'm Coming Out",
+    "artist": "Diana Ross",
+    "year": "1980",
+    "url": "https://open.spotify.com/track/3SnGymj6ijE2iuUfWxLo1q",
+    "checked": true
+  },
+  {
+    "title": "I'm Gonna Love You Just A Little More Baby",
+    "artist": "Barry White",
+    "year": "1973",
+    "url": "https://open.spotify.com/track/6dfyMfiv1fB2IIOjrHy3Sd",
+    "checked": true
+  },
+  {
+    "title": "Ice Ice Baby",
+    "artist": "Vanilla Ice",
+    "year": "1990",
+    "url": "https://open.spotify.com/track/3XVozq1aeqsJwpXrEZrDJ9",
+    "checked": true
+  },
+  {
     "title": "It's All Coming Back to Me Now",
     "artist": "Céline Dion",
     "year": "1996",
@@ -137,7 +179,14 @@
     "artist": "Slimme Schemer, Tido",
     "year": "2001",
     "url": "https://open.spotify.com/track/34ugxS2Lepa3SVOnVaoVqp",
-    "checked": false
+    "checked": true
+  },
+  {
+    "title": "Lady Writer",
+    "artist": "Dire Straits",
+    "year": "1979",
+    "url": "https://open.spotify.com/track/2RBcYkonAofm0rYycVrCGt",
+    "checked": true
   },
   {
     "title": "Let the Good Times Roll",
@@ -168,6 +217,34 @@
     "checked": true
   },
   {
+    "title": "My Heart Is Broken",
+    "artist": "Evanescence",
+    "year": "2011",
+    "url": "https://open.spotify.com/track/1Ej0xptDBpBxUM1dIPcHlm",
+    "checked": true
+  },
+  {
+    "title": "My Name Is",
+    "artist": "Eminem",
+    "year": "1999",
+    "url": "https://open.spotify.com/track/2fy3rYGfYeY24CDPtlQdPq",
+    "checked": true
+  },
+  {
+    "title": "Open Arms",
+    "artist": "Journey",
+    "year": "1981",
+    "url": "https://open.spotify.com/track/29vqBtjJTBLS1f8dKJS4Ht",
+    "checked": true
+  },
+  {
+    "title": "Oude Maasweg",
+    "artist": "The Amazing Stroopwafels",
+    "year": "1988",
+    "url": "https://open.spotify.com/track/6QtWZTEkE4DTRmtZ4ZWVPO",
+    "checked": true
+  },
+  {
     "title": "Out In L.A.",
     "artist": "Red Hot Chili Peppers",
     "year": "1984",
@@ -179,6 +256,13 @@
     "artist": "The Rolling Stones",
     "year": "1966",
     "url": "https://open.spotify.com/track/63T7DJ1AFDD6Bn8VzG6JE8",
+    "checked": true
+  },
+  {
+    "title": "Peter Piper",
+    "artist": "Run–D.M.C.",
+    "year": "1986",
+    "url": "https://open.spotify.com/track/4TiFdcu6NolFKFwukcbdze",
     "checked": true
   },
   {
@@ -203,10 +287,59 @@
     "checked": true
   },
   {
+    "title": "Runaway",
+    "artist": "Status Quo",
+    "year": "1979",
+    "url": "https://open.spotify.com/track/1JpRBHYmUKqRQVncbrk0e8",
+    "checked": true
+  },
+  {
     "title": "RÓA",
     "artist": "VÆB",
     "year": "2025",
     "url": "https://open.spotify.com/track/1YnOwWvV1bQevRqJMCbYJz",
+    "checked": true
+  },
+  {
+    "title": "Satisfyer",
+    "artist": "Roxy Dekker",
+    "year": "2023",
+    "url": "https://open.spotify.com/track/0Uy5VFlvsosR3YZbpsxYFh",
+    "checked": true
+  },
+  {
+    "title": "SOS",
+    "artist": "Rihanna",
+    "year": "2006",
+    "url": "https://open.spotify.com/track/30cSNer6TV8x2utjULVeQ5",
+    "checked": true
+  },
+  {
+    "title": "Sunshine",
+    "artist": "OneRepublic",
+    "year": "2021",
+    "url": "https://open.spotify.com/track/5r43qanLhUCdBj8HN3fa6B",
+    "checked": true
+  },
+  {
+    "title": "Super Freak",
+    "artist": "Rick James",
+    "year": "1981",
+    "url": "https://open.spotify.com/track/2dCmGcEOQrMQhMMS8Vj7Ca",
+    "checked": true
+  },
+  {
+    "title": "Technicolor Dreams",
+    "artist": "Status Quo",
+    "year": "1968",
+    "url": "https://open.spotify.com/track/34ZPPUjpIQDKnqpW8pWqoo",
+    "checked": true
+  },
+  {
+    "title": "Technologic",
+    "artist": "Daft Punk",
+    "year": "2005",
+    "url": "https://open.spotify.com/track/0LSLM0zuWRkEYemF7JcfEE",
     "checked": true
   },
   {
@@ -217,10 +350,24 @@
     "checked": true
   },
   {
+    "title": "Verleden Tijd",
+    "artist": "FLEMMING",
+    "year": "2023",
+    "url": "https://open.spotify.com/track/1vYF6O8JLonzVYrJGSGNNW",
+    "checked": true
+  },
+  {
     "title": "Wannabe",
     "artist": "Spice Girls",
     "year": "1996",
     "url": "https://open.spotify.com/track/1Je1IMUlBXcx1Fz0WE7oPT",
+    "checked": true
+  },
+  {
+    "title": "Work It",
+    "artist": "Missy Elliott",
+    "year": "2002",
+    "url": "https://open.spotify.com/track/4lwmRWzFWzirF4FICVCt37",
     "checked": true
   },
   {
