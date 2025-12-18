@@ -44,7 +44,21 @@ def create_text_on_bg(track, out_path):
     W, H = bg.size
     draw = ImageDraw.Draw(bg)
     # Font sizes relative to image height
-    year_font = get_font(int(H*0.30), bold=True)  # Bigger year
+    # Fit the center text (year or names) by reducing font size until it fits
+    max_year_width = int(W * 0.9)
+    max_font_size = int(H * 0.30)
+    min_font_size = 12
+    year_text = str(track["year"])
+    size = max_font_size
+    year_font = get_font(size, bold=True)
+    year_bbox = draw.textbbox((0,0), year_text, font=year_font)
+    w = year_bbox[2] - year_bbox[0]
+    # Decrease font size until the text fits within the allowed width
+    while w > max_year_width and size > min_font_size:
+        size -= 2
+        year_font = get_font(size, bold=True)
+        year_bbox = draw.textbbox((0,0), year_text, font=year_font)
+        w = year_bbox[2] - year_bbox[0]
     artist_font = get_font(int(H*0.07), bold=True)  # Much smaller
     title_font = get_font(int(H*0.06), italic=True)  # Much smaller
 
@@ -66,9 +80,7 @@ def create_text_on_bg(track, out_path):
         return lines
 
     # Release year (center, a bit higher)
-    year_text = str(track["year"])
-    year_bbox = draw.textbbox((0,0), year_text, font=year_font)
-    w, h = year_bbox[2] - year_bbox[0], year_bbox[3] - year_bbox[1]
+    h = year_bbox[3] - year_bbox[1]
     # Use the bbox to center exactly in the image, accounting for font ascent/descent
     year_x = (W - w) // 2 - year_bbox[0]
     year_y = (H - h) // 2 - year_bbox[1]
