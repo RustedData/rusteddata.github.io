@@ -50,6 +50,7 @@ def get_playlist_tracks(playlist_url):
                 "title": title,
                 "artist": artist_names,
                 "year": release_year,
+                "album": album.get("name", "") if album else "",
                 "url": url
             })
         if results.get("next"):

@@ -59,6 +59,7 @@ def build_wrapped_full(wrapped_list):
             item = {
                 "title": t.get("title", ""),
                 "artist": t.get("artist", ""),
+                "album": t.get("album", ""),
                 "year": t.get("year", ""),
                 "url": t.get("url", ""),
                 "checked": False,

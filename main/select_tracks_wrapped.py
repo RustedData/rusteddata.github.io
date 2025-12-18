@@ -60,7 +60,7 @@ def main():
         persons = sorted({t.get("name") for t in full if t.get("name")})
 
     num_persons = len(persons)
-    target_size = num_persons * 30
+    target_size = num_persons * 34
 
     # Build mappings
     url_to_items = defaultdict(list)
@@ -108,6 +108,16 @@ def main():
                 cnt += 1
         return cnt
 
+    # Helper to check if an album is already present in result
+    def album_exists(album_name):
+        if not album_name:
+            return False
+        for r in result:
+            a = (r.get("album") or "").strip()
+            if a and a.lower() == album_name.lower():
+                return True
+        return False
+
     # Round-robin loop: complete a full pass over persons before checking stop
     while True:
         added_this_round = 0
@@ -117,6 +127,10 @@ def main():
             chosen = None
             for (gmin, personal_order, url, it) in cand_list:
                 if not url or url in result_urls:
+                    continue
+                # album constraint: skip if another song from same album already selected
+                album_name = (it.get("album") or "").strip()
+                if album_exists(album_name):
                     continue
                 # artist constraint
                 first_artist = get_first_artist(it.get("artist", ""))
