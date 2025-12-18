@@ -1,9 +1,65 @@
 [
   {
+    "title": "A Moment Like This",
+    "artist": "Kelly Clarkson",
+    "year": "2003",
+    "url": "https://open.spotify.com/track/1txs2UzUBquVb9Z9ewJHWm",
+    "checked": false
+  },
+  {
     "title": "Aces High",
     "artist": "Iron Maiden",
     "year": "1984",
     "url": "https://open.spotify.com/track/3wFGRek61NIF330UwJCI52",
+    "checked": true
+  },
+  {
+    "title": "Ain't It Fun",
+    "artist": "Paramore",
+    "year": "2013",
+    "url": "https://open.spotify.com/track/1j8z4TTjJ1YOdoFEDwJTQa",
+    "checked": false
+  },
+  {
+    "title": "Ain't Nobody",
+    "artist": "Rufus, Chaka Khan",
+    "year": "1983",
+    "url": "https://open.spotify.com/track/53Za5vyGc1x7GxgJVRjRKc",
+    "checked": false
+  },
+  {
+    "title": "Alive",
+    "artist": "P.O.D.",
+    "year": "2001",
+    "url": "https://open.spotify.com/track/1X4Ntw6Lbaa1ACgilCqMpr",
+    "checked": true
+  },
+  {
+    "title": "All I Ever Wanted",
+    "artist": "Basshunter",
+    "year": "2008",
+    "url": "https://open.spotify.com/track/2PTvik6EqPAIYOclAB3SU8",
+    "checked": true
+  },
+  {
+    "title": "All The Things She Said",
+    "artist": "t.A.T.u.",
+    "year": "2002",
+    "url": "https://open.spotify.com/track/4bJygwUKrRgq1stlNXcgMg",
+    "checked": true
+  },
+  {
+    "title": "Alone",
+    "artist": "Heart",
+    "year": "1980",
+    "url": "https://open.spotify.com/track/0h17TpfCKbbib1J37Qgj7r",
+    "checked": true
+  },
+  {
+    "title": "Bad Day",
+    "artist": "Daniel Powter",
+    "year": "2005",
+    "url": "https://open.spotify.com/track/0mUyMawtxj1CJ76kn9gIZK",
     "checked": true
   },
   {
@@ -14,6 +70,34 @@
     "checked": true
   },
   {
+    "title": "Behind These Hazel Eyes",
+    "artist": "Kelly Clarkson",
+    "year": "2004",
+    "url": "https://open.spotify.com/track/6IhEnN5sa2pnUKA81AN2su",
+    "checked": false
+  },
+  {
+    "title": "Bette Davis Eyes",
+    "artist": "Kim Carnes",
+    "year": "1981",
+    "url": "https://open.spotify.com/track/0odIT9B9BvOCnXfS0e4lB5",
+    "checked": true
+  },
+  {
+    "title": "Bloody Well Right",
+    "artist": "Supertramp",
+    "year": "1974",
+    "url": "https://open.spotify.com/track/2SmlWvdYG6FsagxN3FkHMI",
+    "checked": true
+  },
+  {
+    "title": "Breakfast At Tiffany's",
+    "artist": "Deep Blue Something",
+    "year": "1995",
+    "url": "https://open.spotify.com/track/1uzWOoJdADfstQuFtQFTUn",
+    "checked": true
+  },
+  {
     "title": "Bring It All Back",
     "artist": "S Club",
     "year": "1999",
@@ -21,10 +105,45 @@
     "checked": true
   },
   {
+    "title": "Broken",
+    "artist": "Seether, Amy Lee",
+    "year": "2004",
+    "url": "https://open.spotify.com/track/507bYMYfbm6sUS9iEAaeSd",
+    "checked": true
+  },
+  {
+    "title": "Broken Wings",
+    "artist": "Mr. Mister",
+    "year": "1985",
+    "url": "https://open.spotify.com/track/41CUuaX52fZjRzzCK0rkkh",
+    "checked": true
+  },
+  {
+    "title": "Butterfly",
+    "artist": "Crazy Town",
+    "year": "2000",
+    "url": "https://open.spotify.com/track/4BggEwLhGfrbrl7JBhC8EC",
+    "checked": false
+  },
+  {
     "title": "Calling Elvis",
     "artist": "Dire Straits",
     "year": "1991",
     "url": "https://open.spotify.com/track/5g6o2ZEegnAI3MczbwZaTZ",
+    "checked": true
+  },
+  {
+    "title": "Carrie",
+    "artist": "Europe",
+    "year": "1986",
+    "url": "https://open.spotify.com/track/29wJiSQcze8HEmxkUQykyp",
+    "checked": true
+  },
+  {
+    "title": "Cigarettes & Alcohol",
+    "artist": "Oasis",
+    "year": "1994",
+    "url": "https://open.spotify.com/track/5adjc9rGazKvYcyEHNtoz1",
     "checked": true
   },
   {
@@ -56,6 +175,20 @@
     "checked": true
   },
   {
+    "title": "Desperado",
+    "artist": "Eagles",
+    "year": "1973",
+    "url": "https://open.spotify.com/track/2TjnCxxQRYn56Ye8gkUKiW",
+    "checked": true
+  },
+  {
+    "title": "Don't Dream It's Over",
+    "artist": "Crowded House",
+    "year": "1986",
+    "url": "https://open.spotify.com/track/7G7tgVYORlDuVprcYHuFJh",
+    "checked": true
+  },
+  {
     "title": "Don't Stop Believin'",
     "artist": "Journey",
     "year": "1981",
@@ -70,9 +203,16 @@
     "checked": true
   },
   {
+    "title": "Dreamer",
+    "artist": "Ozzy Osbourne",
+    "year": "2001",
+    "url": "https://open.spotify.com/track/78PKCefXwDLbl4FVO1Pjzh",
+    "checked": false
+  },
+  {
     "title": "Dschinghis Khan",
     "artist": "Dschinghis Khan",
-    "year": "1879",
+    "year": "1979",
     "url": "https://open.spotify.com/track/0L5yDT2FsM8xPXfckmR9yE",
     "checked": true
   },
@@ -81,6 +221,13 @@
     "artist": "Ayreon",
     "year": "2017",
     "url": "https://open.spotify.com/track/7EMaXe1DQ4S0NejsXGlbw2",
+    "checked": true
+  },
+  {
+    "title": "Everybody Wants To Rule The World",
+    "artist": "Tears For Fears",
+    "year": "1985",
+    "url": "https://open.spotify.com/track/4RvWPyQ5RL0ao9LPZeSouE",
     "checked": true
   },
   {
@@ -98,10 +245,52 @@
     "checked": true
   },
   {
+    "title": "Eyes Without A Face",
+    "artist": "Billy Idol",
+    "year": "1983",
+    "url": "https://open.spotify.com/track/0pUVeEgZuNyFzIMKp67RbS",
+    "checked": true
+  },
+  {
+    "title": "Feeling This",
+    "artist": "blink-182",
+    "year": "2003",
+    "url": "https://open.spotify.com/track/0oDMQmipUDEH6ufAZo9QwL",
+    "checked": true
+  },
+  {
+    "title": "Fell On Black Days",
+    "artist": "Soundgarden",
+    "year": "1994",
+    "url": "https://open.spotify.com/track/1wlKw9NAWVWpx7OIAyg9EA",
+    "checked": false
+  },
+  {
+    "title": "Fight For This Love",
+    "artist": "Cheryl",
+    "year": "2009",
+    "url": "https://open.spotify.com/track/33IQnmtJYjCcrvUUMQgi80",
+    "checked": true
+  },
+  {
+    "title": "Georgy Porgy",
+    "artist": "TOTO",
+    "year": "1978",
+    "url": "https://open.spotify.com/track/5jQcJ2st6yHWhUBjoDoZPH",
+    "checked": true
+  },
+  {
     "title": "Greatest Love of All",
     "artist": "Whitney Houston",
     "year": "1985",
     "url": "https://open.spotify.com/track/6yJxCltgtmGxIgKOS6ndnu",
+    "checked": true
+  },
+  {
+    "title": "Hash Pipe",
+    "artist": "TOTO",
+    "year": "2018",
+    "url": "https://open.spotify.com/track/6Tf4Yl9l6sDeENoV0STQTb",
     "checked": true
   },
   {
@@ -119,6 +308,13 @@
     "checked": true
   },
   {
+    "title": "How Bizarre",
+    "artist": "OMC",
+    "year": "1996",
+    "url": "https://open.spotify.com/track/0wJyFu6JHwUoKQN5X3uzVe",
+    "checked": true
+  },
+  {
     "title": "Huisfeestje",
     "artist": "Bankzitters, Roxy Dekker",
     "year": "2024",
@@ -130,6 +326,27 @@
     "artist": "Antoon",
     "year": "2020",
     "url": "https://open.spotify.com/track/07vM3GM9QrrhGYuIMCBh3C",
+    "checked": true
+  },
+  {
+    "title": "I Have Nothing",
+    "artist": "Whitney Houston",
+    "year": "1992",
+    "url": "https://open.spotify.com/track/31er9IGsfFbwqy1pH4aiTP",
+    "checked": false
+  },
+  {
+    "title": "I Keep Forgettin' (Every Time You're Near)",
+    "artist": "Michael McDonald",
+    "year": "1982",
+    "url": "https://open.spotify.com/track/5GvWrvLIqoHroq7YvO260M",
+    "checked": true
+  },
+  {
+    "title": "I Still Cry",
+    "artist": "Ilse DeLange",
+    "year": "2003",
+    "url": "https://open.spotify.com/track/34KM7sX7JhdjnlNyC1tYHO",
     "checked": true
   },
   {
@@ -161,10 +378,52 @@
     "checked": true
   },
   {
+    "title": "If I Had A Gun…",
+    "artist": "Noel Gallagher's High Flying Birds",
+    "year": "2011",
+    "url": "https://open.spotify.com/track/4i4ArYpqtsA3MJ1k0o2dxq",
+    "checked": true
+  },
+  {
+    "title": "If You Had My Love",
+    "artist": "Jennifer Lopez",
+    "year": "1999",
+    "url": "https://open.spotify.com/track/5Qv9M6fEpfi3HSthC5kojR",
+    "checked": true
+  },
+  {
+    "title": "Ik Ben Jouw Beste Vriend",
+    "artist": "Huub van der Lubbe",
+    "year": "2014",
+    "url": "https://open.spotify.com/track/3Ju5gXsgix8ycRfxmiBIep",
+    "checked": true
+  },
+  {
+    "title": "Insane in the Brain",
+    "artist": "Cypress Hill",
+    "year": "1993",
+    "url": "https://open.spotify.com/track/1oTHteQbmJw15rPxPVXUTv",
+    "checked": false
+  },
+  {
+    "title": "Intergalactic",
+    "artist": "Beastie Boys",
+    "year": "1998",
+    "url": "https://open.spotify.com/track/5fpizYGbi5IQoEraj6FP0R",
+    "checked": false
+  },
+  {
     "title": "It's All Coming Back to Me Now",
     "artist": "Céline Dion",
     "year": "1996",
     "url": "https://open.spotify.com/track/5EQzuYfTZt7B2LqlvTF49l",
+    "checked": true
+  },
+  {
+    "title": "It's My Life",
+    "artist": "Talk Talk",
+    "year": "1984",
+    "url": "https://open.spotify.com/track/6m7fhJkK6TbuGDFhBNpgyn",
     "checked": true
   },
   {
@@ -182,10 +441,31 @@
     "checked": true
   },
   {
+    "title": "Jump Around",
+    "artist": "House Of Pain",
+    "year": "1992",
+    "url": "https://open.spotify.com/track/7L93GESzq43UkKUt5FsOCq",
+    "checked": false
+  },
+  {
+    "title": "Know Your Enemy",
+    "artist": "Green Day",
+    "year": "2009",
+    "url": "https://open.spotify.com/track/5qtwzv99vOr5UTwnTixn7j",
+    "checked": true
+  },
+  {
     "title": "Lady Writer",
     "artist": "Dire Straits",
     "year": "1979",
     "url": "https://open.spotify.com/track/2RBcYkonAofm0rYycVrCGt",
+    "checked": true
+  },
+  {
+    "title": "LEG DE ZUIDAS IN DE AS",
+    "artist": "Hang Youth",
+    "year": "2020",
+    "url": "https://open.spotify.com/track/765ZBzfsCgtlUHI7Yp2LRl",
     "checked": true
   },
   {
@@ -200,6 +480,48 @@
     "artist": "AC/DC",
     "year": "1977",
     "url": "https://open.spotify.com/track/753KutoAy00apPsplMRetG",
+    "checked": true
+  },
+  {
+    "title": "Linger",
+    "artist": "The Cranberries",
+    "year": "1993",
+    "url": "https://open.spotify.com/track/0gEyKnHvgkrkBM6fbeHdwK",
+    "checked": false
+  },
+  {
+    "title": "Little Lies",
+    "artist": "Fleetwood Mac",
+    "year": "1987",
+    "url": "https://open.spotify.com/track/4CoSCPlKNrWli7E5kFtbcl",
+    "checked": true
+  },
+  {
+    "title": "Love In The Dark",
+    "artist": "Adele",
+    "year": "2015",
+    "url": "https://open.spotify.com/track/0DuWDLjriRPjDRoPgaCslY",
+    "checked": false
+  },
+  {
+    "title": "Lovefool",
+    "artist": "The Cardigans",
+    "year": "1996",
+    "url": "https://open.spotify.com/track/7aQjPecQdIuNd1sz3KCDhD",
+    "checked": false
+  },
+  {
+    "title": "Man I Need",
+    "artist": "Olivia Dean",
+    "year": "2025",
+    "url": "https://open.spotify.com/track/1qbmS6ep2hbBRaEZFpn7BX",
+    "checked": true
+  },
+  {
+    "title": "Miracles out of Nowhere",
+    "artist": "Kansas",
+    "year": "1976",
+    "url": "https://open.spotify.com/track/4gPnDCCNHUQcbrA8netoyc",
     "checked": true
   },
   {
@@ -231,6 +553,27 @@
     "checked": true
   },
   {
+    "title": "N.I.B.",
+    "artist": "Black Sabbath",
+    "year": "1970",
+    "url": "https://open.spotify.com/track/3XclwoQxz4p6Dl7VUf90KW",
+    "checked": false
+  },
+  {
+    "title": "Never Ever",
+    "artist": "All Saints",
+    "year": "1997",
+    "url": "https://open.spotify.com/track/596XLiW6tohIgkcTMf4M6a",
+    "checked": true
+  },
+  {
+    "title": "Nothing's Gonna Stop Us Now",
+    "artist": "Starship",
+    "year": "1987",
+    "url": "https://open.spotify.com/track/3X7uFMzJrEE0sxn62qd8Ch",
+    "checked": true
+  },
+  {
     "title": "Open Arms",
     "artist": "Journey",
     "year": "1981",
@@ -259,10 +602,45 @@
     "checked": true
   },
   {
+    "title": "Party Up",
+    "artist": "DMX",
+    "year": "1999",
+    "url": "https://open.spotify.com/track/4MxZW1XEcPuIZmkANsJabC",
+    "checked": true
+  },
+  {
     "title": "Peter Piper",
     "artist": "Run–D.M.C.",
     "year": "1986",
     "url": "https://open.spotify.com/track/4TiFdcu6NolFKFwukcbdze",
+    "checked": true
+  },
+  {
+    "title": "Pink",
+    "artist": "Lizzo",
+    "year": "2023",
+    "url": "https://open.spotify.com/track/2YXGbxICUdOUJe9OPlicy1",
+    "checked": true
+  },
+  {
+    "title": "Porch",
+    "artist": "Pearl Jam",
+    "year": "1991",
+    "url": "https://open.spotify.com/track/3zNkNyXEeDs2HeAZ0fYqxI",
+    "checked": false
+  },
+  {
+    "title": "Question!",
+    "artist": "System Of A Down",
+    "year": "2005",
+    "url": "https://open.spotify.com/track/6y2DHyCYf6azhUfXmnuH6w",
+    "checked": true
+  },
+  {
+    "title": "Rain Down on Me",
+    "artist": "KANE",
+    "year": "2003",
+    "url": "https://open.spotify.com/track/4xv2LLbYliRmDWJtPhA1Ji",
     "checked": true
   },
   {
@@ -273,11 +651,32 @@
     "checked": true
   },
   {
+    "title": "Remedy",
+    "artist": "Seether",
+    "year": "2005",
+    "url": "https://open.spotify.com/track/5ynxx6zC4dgzsMHLYQ04Dc",
+    "checked": true
+  },
+  {
     "title": "Rock and Roll",
     "artist": "Led Zeppelin",
     "year": "1971",
     "url": "https://open.spotify.com/track/4PRGxHpCpF2yoOHYKQIEwD",
     "checked": true
+  },
+  {
+    "title": "Rocket Man (I Think It's Going To Be A Long, Long Time)",
+    "artist": "Elton John",
+    "year": "1972",
+    "url": "https://open.spotify.com/track/3gdewACMIVMEWVbyb8O9sY",
+    "checked": true
+  },
+  {
+    "title": "Run Away With Me",
+    "artist": "Carly Rae Jepsen",
+    "year": "2015",
+    "url": "https://open.spotify.com/track/1VKTdQTrcP0cMdySaCEj7F",
+    "checked": false
   },
   {
     "title": "Runaway",
@@ -308,10 +707,87 @@
     "checked": true
   },
   {
+    "title": "Seven Wonders",
+    "artist": "Fleetwood Mac",
+    "year": "1987",
+    "url": "https://open.spotify.com/track/1VN2vWSkSmMKOhxr8lHzSx",
+    "checked": true
+  },
+  {
+    "title": "She Drives Me Crazy",
+    "artist": "Fine Young Cannibals",
+    "year": "1988",
+    "url": "https://open.spotify.com/track/0Zt9fqRK58Y0onY1VwaKp7",
+    "checked": true
+  },
+  {
+    "title": "Shut Up and Let Me Go",
+    "artist": "The Ting Tings",
+    "year": "2008",
+    "url": "https://open.spotify.com/track/6tN0t7Y1bFI1ZU98Ou8Z3i",
+    "checked": true
+  },
+  {
+    "title": "Silver Springs",
+    "artist": "Fleetwood Mac",
+    "year": "1977",
+    "url": "https://open.spotify.com/track/4nZi6XNe36Ut4Nij3IQ1yC",
+    "checked": true
+  },
+  {
+    "title": "Sitting Down Here",
+    "artist": "Lene Marlin",
+    "year": "1999",
+    "url": "https://open.spotify.com/track/2NwXOuYLEbyhlQzDtoANul",
+    "checked": true
+  },
+  {
+    "title": "Smalltown Boy",
+    "artist": "Bronski Beat",
+    "year": "1984",
+    "url": "https://open.spotify.com/track/1nz1xzqPN4xYZtR4zgiLxt",
+    "checked": true
+  },
+  {
+    "title": "Somebody's Watching Me",
+    "artist": "Rockwell",
+    "year": "1984",
+    "url": "https://open.spotify.com/track/7jwQlYGpOml9ETGre1HqGA",
+    "checked": true
+  },
+  {
+    "title": "Sometimes",
+    "artist": "Britney Spears",
+    "year": "1999",
+    "url": "https://open.spotify.com/track/1UI0l2L66HJ9AtoEOlHzv4",
+    "checked": true
+  },
+  {
     "title": "SOS",
     "artist": "Rihanna",
     "year": "2006",
     "url": "https://open.spotify.com/track/30cSNer6TV8x2utjULVeQ5",
+    "checked": true
+  },
+  {
+    "title": "Spiderwebs",
+    "artist": "No Doubt",
+    "year": "1995",
+    "url": "https://open.spotify.com/track/4ZD6SiaJi75smnel0d7jl3",
+    "checked": true
+  },
+  {
+    "title": "Stars Are Blind",
+    "artist": "Paris Hilton",
+    "year": "2006",
+    "url": "https://open.spotify.com/track/71V89tJj9CboDyzncO6ZN2",
+    "checked": true
+  },
+  {
+    "title": "Stay",
+    "artist": "Kensington",
+    "year": "2025",
+    "url": "https://open.spotify.com/track/7FN3Fip2tdiGjW0BuqXRL7",
     "checked": true
   },
   {
@@ -329,6 +805,20 @@
     "checked": true
   },
   {
+    "title": "Superstition",
+    "artist": "Stevie Wonder",
+    "year": "1972",
+    "url": "https://open.spotify.com/track/1h2xVEoJORqrg71HocgqXd",
+    "checked": true
+  },
+  {
+    "title": "Swallowed",
+    "artist": "Bush",
+    "year": "1996",
+    "url": "https://open.spotify.com/track/2EYnvZoSEkwiC8ynBcjLyi",
+    "checked": true
+  },
+  {
     "title": "Technicolor Dreams",
     "artist": "Status Quo",
     "year": "1968",
@@ -343,10 +833,108 @@
     "checked": true
   },
   {
+    "title": "That's The Way Love Goes",
+    "artist": "Janet Jackson",
+    "year": "1993",
+    "url": "https://open.spotify.com/track/29rQJydAlO0uMyWvRIZxQg",
+    "checked": true
+  },
+  {
+    "title": "The Depth of Self-Delusion",
+    "artist": "Riverside",
+    "year": "2013",
+    "url": "https://open.spotify.com/track/5zGVYRSVu3zgQczobXIX1Y",
+    "checked": true
+  },
+  {
+    "title": "The Impression That I Get",
+    "artist": "The Mighty Mighty Bosstones",
+    "year": "1997",
+    "url": "https://open.spotify.com/track/1ru5R5iSawvuMELqKXxLjS",
+    "checked": true
+  },
+  {
+    "title": "The Only",
+    "artist": "Static-X",
+    "year": "2003",
+    "url": "https://open.spotify.com/track/35ZmCVnfYRdK1iLGCxNhMa",
+    "checked": true
+  },
+  {
+    "title": "The Saints Are Coming",
+    "artist": "U2, Green Day",
+    "year": "2006",
+    "url": "https://open.spotify.com/track/2OqCyO684ShnEOqFQieN3Z",
+    "checked": true
+  },
+  {
     "title": "The Whole of the Moon",
     "artist": "The Waterboys",
     "year": "1985",
     "url": "https://open.spotify.com/track/6MYtWkoEiUNZmMe5CgCczM",
+    "checked": true
+  },
+  {
+    "title": "Tigers",
+    "artist": "Bilal Wahib",
+    "year": "2020",
+    "url": "https://open.spotify.com/track/7jnaow1bGpKO2VkgtYE8Vv",
+    "checked": true
+  },
+  {
+    "title": "Tom's Diner",
+    "artist": "DNA, Suzanne Vega, Neal Slateford, Nick Batt",
+    "year": "1990",
+    "url": "https://open.spotify.com/track/4sutLmjkVKRN6pOAMo2joC",
+    "checked": true
+  },
+  {
+    "title": "Total Eclipse of the Heart",
+    "artist": "Bonnie Tyler",
+    "year": "1983",
+    "url": "https://open.spotify.com/track/7wuJGgpTNzbUyn26IOY6rj",
+    "checked": true
+  },
+  {
+    "title": "Trains",
+    "artist": "Porcupine Tree",
+    "year": "2002",
+    "url": "https://open.spotify.com/track/5bO7kXCc21MOj5MOeiBioU",
+    "checked": true
+  },
+  {
+    "title": "Turning Tables",
+    "artist": "Adele",
+    "year": "2011",
+    "url": "https://open.spotify.com/track/2eF2x1BkgilhaZ2AipRY8j",
+    "checked": false
+  },
+  {
+    "title": "Two Princes",
+    "artist": "Spin Doctors",
+    "year": "1991",
+    "url": "https://open.spotify.com/track/0cuq829zRNq4AEdmDJA4aw",
+    "checked": true
+  },
+  {
+    "title": "U + Ur Hand",
+    "artist": "P!nk",
+    "year": "2006",
+    "url": "https://open.spotify.com/track/1iOJQhxKSJ7dg3Dk03yPnl",
+    "checked": false
+  },
+  {
+    "title": "U Sure Do",
+    "artist": "Strike",
+    "year": "1994",
+    "url": "https://open.spotify.com/track/1l0Pomi3r0PZnlk6h96sTB",
+    "checked": true
+  },
+  {
+    "title": "Untouched",
+    "artist": "The Veronicas",
+    "year": "2005",
+    "url": "https://open.spotify.com/track/40bm28QcJT5My540ymSQ2y",
     "checked": true
   },
   {
@@ -357,6 +945,20 @@
     "checked": true
   },
   {
+    "title": "Walk Me Home",
+    "artist": "P!nk",
+    "year": "2019",
+    "url": "https://open.spotify.com/track/2N9bw4i7YitdN2LDDhMmpe",
+    "checked": false
+  },
+  {
+    "title": "Walkin' On The Sun",
+    "artist": "Smash Mouth",
+    "year": "1997",
+    "url": "https://open.spotify.com/track/4TQeNHx85xcP9YRkvJC6K1",
+    "checked": false
+  },
+  {
     "title": "Wannabe",
     "artist": "Spice Girls",
     "year": "1996",
@@ -364,10 +966,59 @@
     "checked": true
   },
   {
+    "title": "Watch Over You",
+    "artist": "Alter Bridge",
+    "year": "2007",
+    "url": "https://open.spotify.com/track/7kxfWvj6u9oWQ5C36kMtGb",
+    "checked": true
+  },
+  {
+    "title": "What the Hell",
+    "artist": "Avril Lavigne",
+    "year": "2011",
+    "url": "https://open.spotify.com/track/2z4U9d5OAA4YLNXoCgioxo",
+    "checked": false
+  },
+  {
+    "title": "What's Up?",
+    "artist": "4 Non Blondes",
+    "year": "1992",
+    "url": "https://open.spotify.com/track/0jWgAnTrNZmOGmqgvHhZEm",
+    "checked": true
+  },
+  {
+    "title": "Why Did It Have To Be Me?",
+    "artist": "ABBA",
+    "year": "1976",
+    "url": "https://open.spotify.com/track/65EhfozJEurgR34SyrNV3P",
+    "checked": true
+  },
+  {
+    "title": "Wind It Up",
+    "artist": "Gwen Stefani",
+    "year": "2006",
+    "url": "https://open.spotify.com/track/5kGrJb74Z8XAs9p9QR54wq",
+    "checked": true
+  },
+  {
+    "title": "Word Up",
+    "artist": "Cameo",
+    "year": "1986",
+    "url": "https://open.spotify.com/track/7LoGfKBAaOl0nxhodJ1240",
+    "checked": true
+  },
+  {
     "title": "Work It",
     "artist": "Missy Elliott",
     "year": "2002",
     "url": "https://open.spotify.com/track/4lwmRWzFWzirF4FICVCt37",
+    "checked": true
+  },
+  {
+    "title": "Wêr Bisto",
+    "artist": "Twarres",
+    "year": "2000",
+    "url": "https://open.spotify.com/track/5Xca9Le7973k7m9EorIZUs",
     "checked": true
   },
   {
@@ -385,10 +1036,24 @@
     "checked": true
   },
   {
+    "title": "You Really Got Me",
+    "artist": "Van Halen",
+    "year": "1978",
+    "url": "https://open.spotify.com/track/0upLyFR8Rr52ZpMp5esQoq",
+    "checked": true
+  },
+  {
     "title": "You've Got a Friend in Me",
     "artist": "Randy Newman",
     "year": "1995",
     "url": "https://open.spotify.com/track/2stkLJ0JNcXkIRDNF3ld6c",
+    "checked": true
+  },
+  {
+    "title": "YYZ",
+    "artist": "Rush",
+    "year": "1981",
+    "url": "https://open.spotify.com/track/3lpDrxUkr0tIe1kmJvdK7d",
     "checked": true
   },
   {
