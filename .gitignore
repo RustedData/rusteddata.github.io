@@ -74,6 +74,7 @@ Thumbs.db
 *.jpg
 *.jpeg
 *.tmp
+*.png
 
 # Local data
 qrcards_text_side.pdf
