@@ -148,6 +148,7 @@ def main():
                 out_item = {
                     "title": it.get("title", ""),
                     "artist": it.get("artist", ""),
+                    "album": it.get("album", ""),
                     "year": it.get("year", ""),
                     "url": url,
                     "checked": False,

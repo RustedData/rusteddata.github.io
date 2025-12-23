@@ -1,25 +1,43 @@
+import sys, os
+# Ensure the repository root is on sys.path so `from main.*` imports work
+_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _repo_root not in sys.path:
+    sys.path.insert(0, _repo_root)
+
 from PyPDF2 import PdfReader, PdfWriter
-from main.config import TEXT_OUTPUT_PDF_TEMPLATE, QR_OUTPUT_PDF_TEMPLATE, COMBINED_OUTPUT_PDF_TEMPLATE, get_playlist_url
-from main.spotify_utils import get_playlist_slug
-import os
+from main.config import TEXT_OUTPUT_PDF_TEMPLATE, QR_OUTPUT_PDF_TEMPLATE, COMBINED_OUTPUT_PDF_TEMPLATE
 
-# Resolve per-playlist filenames
-playlist_url = get_playlist_url()
-playlist_slug = get_playlist_slug(playlist_url)
-
-# If there is a slug-named spotify_tracks file in main/playlist_list/, prefer that slug
-try:
-    playlist_list_dir = os.path.join(os.path.dirname(__file__), "playlist_list")
-    if os.path.isdir(playlist_list_dir):
-        for fname in os.listdir(playlist_list_dir):
-            if not fname.startswith("spotify_tracks_") or not fname.endswith(".json"):
-                continue
+# Let the user pick which `spotify_tracks_*.json` to use from `main/playlist_list/`
+playlist_list_dir = os.path.join(os.path.dirname(__file__), "playlist_list")
+candidates = []
+if os.path.isdir(playlist_list_dir):
+    for fname in sorted(os.listdir(playlist_list_dir)):
+        if fname.startswith("spotify_tracks_") and fname.endswith(".json"):
             name = fname[len("spotify_tracks_"):-len(".json")]
-            if name:
-                playlist_slug = name
+            candidates.append((name, fname))
+
+if not candidates:
+    print(f"No spotify_tracks_*.json files found in {playlist_list_dir}")
+    sys.exit(1)
+
+if len(candidates) == 1:
+    playlist_slug = candidates[0][0]
+else:
+    print("Select playlist list to combine PDFs:")
+    for i, (name, fname) in enumerate(candidates, start=1):
+        print(f"{i}: {fname}")
+    while True:
+        sel = input(f"Choose 1-{len(candidates)} [1]: ").strip()
+        if not sel:
+            sel = "1"
+        try:
+            idx = int(sel)
+            if 1 <= idx <= len(candidates):
+                playlist_slug = candidates[idx-1][0]
                 break
-except Exception:
-    pass
+        except Exception:
+            pass
+        print("Invalid selection, try again.")
 
 pdf1_path = TEXT_OUTPUT_PDF_TEMPLATE.format(playlist_slug=playlist_slug)
 pdf2_path = QR_OUTPUT_PDF_TEMPLATE.format(playlist_slug=playlist_slug)

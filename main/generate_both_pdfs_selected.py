@@ -24,8 +24,9 @@ Differences from `generate_both_pdfs.py`:
 SELECTED_PATH = os.path.join(os.path.dirname(__file__), "playlist_list", "spotify_tracks_wrapped_selected.json")
 
 if __name__ == "__main__":
-    # Use the selected JSON filename to derive an output slug (no URL required)
-    playlist_slug = os.path.splitext(os.path.basename(SELECTED_PATH))[0]
+    # Derive slug from selected filename but strip leading "spotify_tracks_"
+    base = os.path.splitext(os.path.basename(SELECTED_PATH))[0]
+    playlist_slug = base.replace("spotify_tracks_", "")
 
     # Read selected tracks
     if not os.path.exists(SELECTED_PATH):
